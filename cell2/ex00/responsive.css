@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.c1 {
+    background-color: yellow;
+    flex: auto;
+}
+.c2 {
+    background-color: gray; 
+    flex: auto;
+}

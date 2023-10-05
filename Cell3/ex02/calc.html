@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Calculator</title>
+    <style>
+        .calculator
+        {
+            width: 50%;
+            height: 50%;
+            align-self: center;
+        }
+        .calcForm 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator" >
+        <fieldset>
+            <form class="calcForm">
+                <legend><b>Calculator:</b></legend>
+                <label for="value-1">Introduce First Value</label><br>
+                <input type="text" id="value-1" name="fvalue"><br>
+                <label for="operators">Choose your operator</label><br>
+                <select id="operators">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                    </select>
+                <label for="value-2">Introduce Second Value</label><br>
+                <input type="text" id="value-2" name="svalue"><br>
+                <input type="submit" value="Try me!" id="result">
+            </form>
+        </fieldset>
+    </div>
+    <footer></footer>
+    <script>
+        const button = document.getElementById("result");
+        button.addEventListener("click", calc);
+        function calc() {
+            let value_1 = parseInt(document.getElementById("value-1").value);
+            let value_2 = parseInt(document.getElementById("value-2").value);
+            let operator = document.getElementById("operators").value;
+            if (value_1 < 0 || value_2 < 0 || !value_1 || !value_2)
+                alert("Error :(");
+            else if ((operator === "/" || operator === "%") && value_2 === '0')
+                alert("It's over 9000!");
+            else
+            {
+                switch(operator)
+                {
+                    case '+':
+                        result = value_1 + value_2;
+                        break;
+                    case '-':
+                        result = value_1 - value_2;
+                        break;
+                    case '*':
+                        result = value_1 * value_2;
+                        break;
+                    case '/':
+                        result = value_1 / value_2;
+                        break;
+                    case '%':
+                        result = value_1 % value_2;
+                        break;
+                }
+                console.log(result);
+                alert(result);
+            }
+        }
+        window.setInterval(() => {alert("Please use me...")}, 30000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.black-block{
+    background-color: black;
+    text-align: center;
+}
+.picture-1, .picture-2 {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picture-1 {
+    background-image: url("https://cdn-3.expansion.mx/d6/c3/2f12d84c43ee88a92f7a2ca0ad6b/matrix-recargado.jpg");
+}
+.picture-2 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/The.Matrix.glmatrix.2.png");
+}
+.message-1 , .message-2, .message-3{
+    font-size: 85px;
+    color: white;
+}

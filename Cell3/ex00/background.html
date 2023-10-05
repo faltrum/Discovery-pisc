@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<title>My background</title>
+	<head>
+		<link rel="stylesheet" href="background.css"/>
+        
+	</head>
+    <body id="background">
+        <button onclick="randomColor()">Clikeame y lo fliparás en colores</button>
+        <script>
+            function randomColor(){
+                const color = '#' + Math.floor(Math.random()*16777215).toString(16);
+                document.body.style.backgroundColor = color;
+            }   
+        </script>
+	</body>
+	<footer></footer>
+</html>

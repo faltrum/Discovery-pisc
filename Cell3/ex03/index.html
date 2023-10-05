@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My TO DO list</title>
+    <script src="todo.js"></script> 
+    <style>
+        body {
+            display: flex;
+            background-color: grey;
+        }
+        .container
+        {
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            background-color: greenyellow;
+        }
+        .list
+        {
+            overflow: scroll;
+        }
+        .todolist
+        {
+            
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            margin-top: auto;
+            background-color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="list" id="ft_list"> 
+            <div class="todolist"></div>
+        </div>
+        <button class="button" id="new">NEW</button>
+    </div>
+    <footer></footer>
+</body>
+</html>
